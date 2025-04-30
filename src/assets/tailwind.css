@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+@layer utilities {
+  .font-roboto-mono {
+    font-family: 'Roboto Mono', sans-serif;
+  }
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+  .font-pixel {
+    font-family: 'coral Pixels', sans-serif;
+  }
+  .font-DM-sans {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
