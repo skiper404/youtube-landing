@@ -39,7 +39,7 @@
         ></path>
       </g>
     </svg>
-    <span class="absolute -top-2 -right-5 text-xs text-neutral-400">UA</span>
+    <span class="absolute -top-1 -right-4 text-[10px] text-neutral-400">UA</span>
   </div>
 </template>
 
