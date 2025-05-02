@@ -37,16 +37,34 @@ import YouTubeSettingsLogo from './icons/YouTubeSettingsLogo.vue'
 import ReportHistoryLogo from './icons/ReportHistoryLogo.vue'
 import HelpLogo from './icons/HelpLogo.vue'
 import SendFeedbackLogo from './icons/SendFeedbackLogo.vue'
-import ChannelLogo from './icons/ChanneLogo.vue'
 import SubsLogo from './icons/SubsLogo.vue'
+import UserGoogleLogo from './icons/userlogos/UserGoogleLogo.vue'
+import UserSwitchLogo from './icons/userlogos/UserSwitchLogo.vue'
+import UserSignOutLogo from './icons/userlogos/UserSignOutLogo.vue'
+import UserYouTubeStudio from './icons/userlogos/UserYouTubeStudio.vue'
+import UserPremium from './icons/userlogos/UserPremium.vue'
+import UserPurchase from './icons/userlogos/UserPurchase.vue'
+import UserData from './icons/userlogos/UserData.vue'
+import UserAppearence from './icons/userlogos/UserAppearence.vue'
+import UserLanguage from './icons/userlogos/UserLanguage.vue'
+import UserMode from './icons/userlogos/UserMode.vue'
+import UserLocation from './icons/userlogos/UserLocation.vue'
+import UserKeyboard from './icons/userlogos/UserKeyboard.vue'
+import UserSettings from './icons/userlogos/UserSettings.vue'
+import UserHelp from './icons/userlogos/UserHelp.vue'
+import UserFeedback from './icons/userlogos/UserFeedback.vue'
+import UserUpload from './icons/userlogos/UserUpload.vue'
+import UserCrearePost from './icons/userlogos/UserCrearePost.vue'
+import UserLive from './icons/userlogos/UserLive.vue'
 
 const randomSeed = () => Math.floor(Math.random() * 1000)
 </script>
 
 <template>
-  <div class="relative bg-[#111111] text-center tracking-tight text-white">
+  <div class="bg-[#111111] text-center tracking-tight text-white">
     <input id="toggle-menu" type="checkbox" class="peer hidden" />
-    <header class="fixed top-0 right-0 left-0 z-20 bg-[#121212]">
+    <header class="fixed top-0 right-0 left-0 z-20 bg-[#111111]/95">
+      <div class="pointer-events-none absolute inset-0 -z-1 backdrop-blur-xs"></div>
       <section class="flex flex-row items-center justify-between px-6 py-2">
         <div class="flex items-center justify-center gap-2">
           <label for="toggle-menu" class="cursor-pointer p-1">
@@ -57,47 +75,302 @@ const randomSeed = () => Math.floor(Math.random() * 1000)
           </a>
         </div>
 
-        <div class="flex max-w-[700px] min-w-[300px] flex-1 items-center justify-center gap-4 px-2">
+        <input type="checkbox" id="mic" class="peer hidden" />
+        <div class="flex max-w-xl flex-1 items-center justify-center gap-4 px-2">
           <form class="relative flex w-full items-center">
             <input
               type="text"
               class="w-full rounded-l-full border border-neutral-800 px-4 py-2 outline-0 focus:border-blue-500"
               placeholder="Search"
             />
-            <button class="absolute top-0 right-16">
+            <button type="button" class="absolute top-0 right-16">
               <XMarkIcon class="h-10 p-1" />
             </button>
-            <button class="rounded-r-full border border-neutral-800 bg-neutral-800 px-4 py-2">
+            <button
+              type="submit"
+              class="rounded-r-full border border-neutral-800 bg-neutral-800 px-4 py-2 hover:bg-neutral-600"
+            >
               <MagnifyingGlassIcon class="h-6" />
             </button>
           </form>
-          <a class="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-700">
-            <MicrophoneIcon class="size-6" />
-          </a>
+
+          <label for="mic" class="cursor-pointer">
+            <div
+              class="flex min-h-10 min-w-10 items-center justify-center rounded-full bg-neutral-800 hover:bg-neutral-600"
+            >
+              <MicrophoneIcon class="size-6" />
+            </div>
+          </label>
         </div>
+        <label
+          for="mic"
+          class="fixed inset-0 z-10 hidden cursor-pointer justify-center bg-black/50 peer-checked:flex"
+        >
+          <div class="relative mt-10 h-[400px] w-[500px] rounded-xl bg-[#242424] p-4">
+            <button
+              for="mic"
+              class="absolute top-4 right-4 cursor-pointer px-3 py-1 hover:bg-neutral-700"
+            >
+              <XMarkIcon class="h-10" />
+            </button>
+            <p class="mt-10 px-10 text-left text-3xl text-white">Listening...</p>
+            <div class="absolute bottom-10 left-54 animate-ping rounded-full bg-red-500 p-3">
+              <MicrophoneIcon class="size-6" />
+            </div>
+          </div>
+        </label>
 
         <div class="hidden items-center justify-center gap-2 sm:flex">
-          <a class="flex h-10 items-center justify-center gap-2 rounded-full bg-neutral-700 px-3">
-            <PlusIcon class="size-6" />
-            <span class="text-sm font-semibold">Create</span>
-          </a>
-
-          <a href="#">
-            <BellIcon class="size-7" />
-          </a>
-
-          <a href="#">
-            <div
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-500 text-2xl text-orange-600"
+          <div class="flex">
+            <input type="checkbox" id="createBlock" class="peer hidden" />
+            <label for="createBlock">
+              <div
+                class="flex h-10 items-center justify-center gap-2 rounded-full bg-neutral-800 px-3 hover:bg-neutral-600"
+              >
+                <PlusIcon class="size-6" />
+                <span class="text-sm font-semibold">Create</span>
+              </div>
+            </label>
+            <section
+              class="fixed top-10 right-4 hidden w-[200px] rounded-xl bg-[#242424] peer-checked:block"
             >
-              S
-            </div>
-          </a>
+              <ul class="my-2 rounded-xl text-sm">
+                <li class="py-2 hover:bg-[#555555]">
+                  <a href="#" class="flex items-center gap-4 px-6">
+                    <UserUpload class="h-6" /> Upload video
+                  </a>
+                </li>
+                <li class="py-2 hover:bg-[#555555]">
+                  <a href="#" class="flex items-center gap-4 px-6"
+                    ><UserLive class="h-6" /> Go Live
+                  </a>
+                </li>
+                <li class="py-2 hover:bg-[#555555]">
+                  <a href="#" class="flex items-center gap-4 px-6">
+                    <UserCrearePost class="h-6" />
+                    Create post
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="flex">
+            <input type="checkbox" id="notifications" class="peer hidden" />
+            <label for="notifications">
+              <div class="rounded-full p-1 hover:bg-neutral-600">
+                <BellIcon class="size-7" />
+              </div>
+            </label>
+            <section
+              class="fixed top-12 right-18 hidden h-[500px] w-[500px] rounded-2xl bg-[#242424] text-sm peer-checked:block"
+            >
+              <div class="flex items-center justify-between p-4">
+                Notifications <UserSettings class="h-8 rounded-full p-1 hover:bg-[#555555]" />
+              </div>
+              <hr class="my-1 py-1 text-[#555555]" />
+              <div>
+                <ul class="flex flex-col">
+                  <li class="p-4 hover:bg-[#555555]">
+                    <a href="#" class="flex items-center justify-between gap-4">
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-12 w-12 rounded-full"
+                      />
+                      <div class="w-70 text-left text-sm">
+                        <p class="">Arthas is live: Последний из вас</p>
+                        <p class="font-light">1 days ago</p>
+                      </div>
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-9 w-16"
+                      />
+                      <button>
+                        <EllipsisVerticalIcon class="h-6" />
+                      </button>
+                    </a>
+                  </li>
+                  <li class="p-4 hover:bg-[#555555]">
+                    <a href="#" class="flex items-center justify-between gap-4">
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-12 w-12 rounded-full"
+                      />
+                      <div class="w-70 text-left text-sm">
+                        <p class="">Bouleward Depo uploaded: Bouleward Depo - ДЫРБУЛЩИЩ</p>
+                        <p class="font-light">3 days ago</p>
+                      </div>
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-9 w-16"
+                      />
+                      <button>
+                        <EllipsisVerticalIcon class="h-6" />
+                      </button>
+                    </a>
+                  </li>
+                  <li class="p-4 hover:bg-[#555555]">
+                    <a href="#" class="flex items-center justify-between gap-4">
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-12 w-12 rounded-full"
+                      />
+                      <div class="w-70 text-left text-sm">
+                        <p class="">Янчик uploaded: Пересадка</p>
+                        <p class="font-light">6 days ago</p>
+                      </div>
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-9 w-16"
+                      />
+                      <button>
+                        <EllipsisVerticalIcon class="h-6" />
+                      </button>
+                    </a>
+                  </li>
+                  <li class="p-4 hover:bg-[#555555]">
+                    <a href="#" class="flex items-center justify-between gap-4">
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-12 w-12 rounded-full"
+                      />
+                      <div class="w-70 text-left text-sm">
+                        <p class="">Paul_Matteo uploaded: Тот самый друг</p>
+                        <p class="font-light">8 days ago</p>
+                      </div>
+                      <img
+                        :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+                        alt="video_preview"
+                        class="h-9 w-16"
+                      />
+                      <button>
+                        <EllipsisVerticalIcon class="h-6" />
+                      </button>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <div>
+            <input type="checkbox" id="usermenu" class="peer hidden" />
+            <label for="usermenu">
+              <img
+                :src="`https://picsum.photos/560/315`"
+                alt="video_preview"
+                class="h-10 w-10 rounded-full"
+              />
+            </label>
+            <section
+              class="fixed top-12 right-4 z-50 hidden w-[300px] overflow-auto rounded-2xl bg-[#242424] peer-checked:block"
+            >
+              <div class="flex">
+                <img
+                  :src="`https://picsum.photos/560/315`"
+                  alt="video_preview"
+                  class="m-2 h-10 w-10 rounded-full"
+                />
+                <div class="flex flex-col items-start py-2">
+                  <span>John Doe</span>
+                  <span>@Joundoe12</span>
+                  <a href="#" class="cursor-pointer py-1 text-blue-400">View your channel</a>
+                </div>
+              </div>
+              <hr class="my-1 py-1 text-[#555555]" />
+              <ul class="text-sm">
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserGoogleLogo class="h-6" />Google Account</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserSwitchLogo class="h-6" />Switch Account</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserSignOutLogo class="h-6" />Sign out</a
+                  >
+                </li>
+                <hr class="my-2 text-[#555555]" />
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserYouTubeStudio class="h-6" />YouTube studio</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserPremium class="h-6" />Your Premium Benefits</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserPurchase class="h-6" />Purchases and memberships</a
+                  >
+                </li>
+                <hr class="my-2 text-[#555555]" />
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserData class="h-6" />Your data in YouTube</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserAppearence class="h-6" />Appearence: Device theme</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserLanguage class="h-6" />Language: English</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserMode class="h-6" />Restricted Mode: Off</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserLocation class="h-6" />Location: Ukraine</a
+                  >
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserKeyboard class="h-6" />Keyboard shortcuts</a
+                  >
+                </li>
+                <hr class="my-2 text-[#555555]" />
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserSettings class="h-6" />Settings</a
+                  >
+                </li>
+                <hr class="my-2 text-[#555555]" />
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"><UserHelp class="h-6" />Help</a>
+                </li>
+                <li class="p-2 hover:bg-[#555555]">
+                  <a href="" class="flex items-center gap-4"
+                    ><UserFeedback class="h-6" />Send feedback</a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
       </section>
     </header>
 
-    <aside class="fixed top-14 bottom-0 left-0 z-20 hidden w-[80px] bg-[#121212] md:block">
+    <aside class="fixed top-14 bottom-0 left-0 z-20 hidden w-[80px] bg-[#111111] md:block">
       <nav>
         <ul class="flex flex-col items-center gap-3 text-[10px]">
           <li class="w-full">
@@ -134,110 +407,10 @@ const randomSeed = () => Math.floor(Math.random() * 1000)
       </nav>
     </aside>
 
-    <section class="fixed top-14 right-0 left-0 bg-[#121212] py-1 pl-2 text-[16px] md:pl-20">
-      <ul class="scrollbar-hide flex items-center gap-2 overflow-auto px-2 py-1 whitespace-nowrap">
-        <li
-          class="cursor-pointer rounded-lg bg-[#efefef] px-2 py-0.5 text-gray-900 transition duration-300 hover:bg-[#292929]"
-        >
-          All
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Poscasts
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Music
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Mixes
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Apple
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Frontend developing
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Tesla
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Blogs
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Satire
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Live
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Live television
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Comedy club
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Gadges
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Computers
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Rapping
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Electronic
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Recently uploaded
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          Watched
-        </li>
-        <li
-          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
-        >
-          New to you
-        </li>
-      </ul>
-    </section>
-
     <aside
-      class="fixed top-0.5 left-0 z-20 max-h-screen w-[260px] -translate-x-full overflow-auto bg-[#151515] transition duration-300 peer-checked:block peer-checked:translate-x-0"
+      class="fixed inset-0 z-20 max-h-screen w-[260px] -translate-x-full overflow-auto bg-[#151515] transition duration-300 peer-checked:block peer-checked:translate-x-0"
     >
-      <nav class="">
+      <nav class="fixed">
         <div class="flex items-center gap-2 px-6 py-2">
           <input id="toggle-menu" type="checkbox" class="peer hidden" />
           <label for="toggle-menu" class="cursor-pointer p-1">
@@ -541,7 +714,110 @@ const randomSeed = () => Math.floor(Math.random() * 1000)
       </nav>
     </aside>
 
-    <main class="mt-25 p-4 md:ml-[80px]">
+    <section
+      class="fixed top-14 right-0 left-0 z-10 bg-[#121212]/95 py-1 pl-2 text-[16px] md:pl-20"
+    >
+      <div class="pointer-events-none absolute inset-0 -z-10 backdrop-blur-xs"></div>
+      <ul class="scrollbar-hide flex items-center gap-2 overflow-auto px-2 py-1 whitespace-nowrap">
+        <li
+          class="cursor-pointer rounded-lg bg-[#efefef] px-2 py-0.5 text-gray-900 transition duration-300 hover:bg-[#292929]"
+        >
+          All
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Poscasts
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Music
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Mixes
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Apple
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Frontend developing
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Tesla
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Blogs
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Satire
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Live
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Live television
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Comedy club
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Gadges
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Computers
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Rapping
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Electronic
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Recently uploaded
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Watched
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          New to you
+        </li>
+      </ul>
+    </section>
+
+    <main class="px-6 pt-25 md:ml-[80px]">
       <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         <a href="#" class="group mb-5">
           <div class="relative">
