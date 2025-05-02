@@ -8,6 +8,8 @@ import {
   ChevronRightIcon,
   ChevronDownIcon,
   UserCircleIcon,
+  SpeakerWaveIcon,
+  SpeakerXMarkIcon,
 } from '@heroicons/vue/24/outline'
 import { MicrophoneIcon, CheckCircleIcon, EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
 import YouTubeLogo from '@/icons/YouTubeLogo.vue'
@@ -36,6 +38,9 @@ import ReportHistoryLogo from './icons/ReportHistoryLogo.vue'
 import HelpLogo from './icons/HelpLogo.vue'
 import SendFeedbackLogo from './icons/SendFeedbackLogo.vue'
 import ChannelLogo from './icons/ChanneLogo.vue'
+import SubsLogo from './icons/SubsLogo.vue'
+
+const randomSeed = () => Math.floor(Math.random() * 1000)
 </script>
 
 <template>
@@ -130,63 +135,107 @@ import ChannelLogo from './icons/ChanneLogo.vue'
     </aside>
 
     <section class="fixed top-14 right-0 left-0 bg-[#121212] py-1 pl-2 text-[16px] md:pl-20">
-      <ul class="flex items-center gap-2 truncate px-2 py-1 whitespace-nowrap">
-        <li class="cursor-pointer rounded-lg bg-[#efefef] px-2 py-0.5 text-gray-900">All</li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+      <ul class="scrollbar-hide flex items-center gap-2 overflow-auto px-2 py-1 whitespace-nowrap">
+        <li
+          class="cursor-pointer rounded-lg bg-[#efefef] px-2 py-0.5 text-gray-900 transition duration-300 hover:bg-[#292929]"
+        >
+          All
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Poscasts
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Music
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Mixes
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Apple
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Frontend developing
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Tesla
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Blogs
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Satire
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Live
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Live television
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Comedy club
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Gadges
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Computers
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Rapping
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Electronic
         </li>
-        <li class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
           Recently uploaded
         </li>
-        <li class="rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">Watched</li>
-        <li class="rounded-lg bg-[#232323] px-2.5 py-0.5 hover:bg-[#292929]">New to you</li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          Watched
+        </li>
+        <li
+          class="cursor-pointer rounded-lg bg-[#232323] px-2.5 py-0.5 transition duration-300 hover:bg-[#292929]"
+        >
+          New to you
+        </li>
       </ul>
     </section>
 
     <aside
-      class="fixed top-0.5 left-0 z-20 w-[260px] -translate-x-full bg-[#151515] transition duration-300 peer-checked:block peer-checked:translate-x-0"
+      class="fixed top-0.5 left-0 z-20 max-h-screen w-[260px] -translate-x-full overflow-auto bg-[#151515] transition duration-300 peer-checked:block peer-checked:translate-x-0"
     >
       <nav class="">
         <div class="flex items-center gap-2 px-6 py-2">
@@ -201,9 +250,7 @@ import ChannelLogo from './icons/ChanneLogo.vue'
 
         <ul>
           <li class="px-4">
-            <a
-              href="#"
-              class="flex items-center gap-6 rounded-xl px-6 py-2 text-sm hover:bg-[#232323]"
+            <a href="#" class="flex items-center gap-6 rounded-xl bg-[#232323] px-6 py-2 text-sm"
               ><HomeLogo class="h-6" />Home</a
             >
           </li>
@@ -496,406 +543,762 @@ import ChannelLogo from './icons/ChanneLogo.vue'
 
     <main class="mt-25 p-4 md:ml-[80px]">
       <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/123456/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
-            <div>
-              <ChannelLogo letter="S" color="#18aa6a" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> 10 Things You Didn't Know About Space </span>
-                <EllipsisVerticalIcon class="h-6" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Space</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>1M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>2 year ago</span>
-              </div>
-            </div>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >42:22</span
+            >
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/344536/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="M" color="#233432" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> $1 vs $1000 Coffee – Taste Test </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">All About LEGO</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">LEGO</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Lorax</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>234K views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>1 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>1M views</span>
+                &middot;
+                <span>6 month ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/342536/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >20:09</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="M" color="#233432" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> Can You Pass This Impossible Quiz? </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">Space Life</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">COSMO</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>John Tompson</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>1M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>1 weeks ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>2M views</span>
+                &middot;
+                <span>2 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/467377/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >21:22</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="O" color="#443883" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> AI Took Over My Job for a Week </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">Is Zombie is REAL?</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Scary story</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>699eve</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>45K views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>4 hours ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>1M views</span>
+                &middot;
+                <span>2 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/232342/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >17:28</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="BA" color="#234442" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> Extreme Room Makeover on a Budget </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">Can You Pass This Impossible Quiz?</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Lorax</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Hounted rooms</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>6M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>1 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>1M views</span>
+                &middot;
+                <span>2 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/585818/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >47:11</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="R" color="#342943" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> What Happens If You Don’t Sleep for 72 Hours? </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">LAMBO VS FERRARI</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">CARS</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Jam</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>3M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>3 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>10M views</span>
+                &middot;
+                <span>2 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/225523/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >52:02</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="Q" color="#119922" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> Unboxing the World's Smallest Laptop </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">10 Things You Didn't Know About Planes</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Planes Industry</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Puzzle Dog</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>10M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>2 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>1M views</span>
+                &middot;
+                <span>2 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/981844/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >42:22</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="L" color="#883051" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> I Tried Following a Bob Ross Painting Tutorial </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">Top 10 Shazam songs 2023</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Shazam</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Lifting power</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>883M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>4 years ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>1M views</span>
+                &middot;
+                <span>2 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/883323/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >6:11</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="X" color="#676767" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> React vs Vue – Which One Is Better? </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">
+                Kanye West - who is he? Genius or psyco
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Proj Paradise</span><CheckCircleIcon class="h-5" />
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">MTV</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>6M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>1 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>12M views</span>
+                &middot;
+                <span>3 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/119320/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >7:15</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="N" color="#322234" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> Top 5 Hidden Features in iOS 18 </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">10 ways to prepare healthy chicken</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Cocked</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Scary slipper</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>20k views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>6 month ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>233K views</span>
+                &middot;
+                <span>1 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/375946/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >42:32</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="V" color="#453829" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> Day in the Life of a Software Engineer </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">The biggest buildings in the world</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">WSI</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Day&Night</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>1M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>2 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>3M views</span>
+                &middot;
+                <span>5 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/461111/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >52:02</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="S" color="#123443" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> Coding a Game in 24 Hours – Challenge </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">React vs Vue</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">JS Coder</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Lowcosters</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>642K views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>1 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>1M views</span>
+                &middot;
+                <span>2 month ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/222212/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >11:42</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="K" color="#d8aaaa" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> I Survived 24 Hours in a Haunted House </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">
+                10 Things You Didn't Know About Animals
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Pimping</span><CheckCircleIcon class="h-5" />
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Animals</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>61M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>12 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>772K views</span>
+                &middot;
+                <span>2 month ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/777777/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >15:22</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="P" color="#d12322" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span> The Most Satisfying Video You'll See Today </span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">Coffee or Tea?</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Health</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>MFR</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>3M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>3 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>2M views</span>
+                &middot;
+                <span>4 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/142212/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >25:28</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="M" color="#d8826a" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span>Trying Weird Snacks from Around the World</span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">How does it works? Computers</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Discovery</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Real life</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>452K views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>2 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>15M views</span>
+                &middot;
+                <span>1 year ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://fakeimg.pl/560x315/342981/"
-            alt="video_preview"
-            class="w-full rounded-xl"
-          />
-          <div class="flex p-2">
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >18:07</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
             <div>
-              <ChannelLogo letter="S" color="#d8aa6a" class="h-10 w-10" />
-            </div>
-            <div class="ml-2 flex w-full flex-col text-left">
-              <div class="flex w-full items-center justify-between font-semibold">
-                <span>This Trick Will Change Your Life</span>
-                <EllipsisVerticalIcon class="h-6" />
+              <div class="mb-1 text-left font-semibold">Escape or Die challenge</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Mostixsn</span>
+                <CheckCircleIcon class="h-5" />
               </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>Lifehucker</span><CheckCircleIcon class="h-5" />
-              </div>
-              <div class="flex items-center gap-2 text-sm text-[#aaaaaa]">
-                <span>1M views</span><span class="h-1 w-1 rounded-full bg-[#aaaaaa]"></span
-                ><span>1 year ago</span>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>231K views</span>
+                &middot;
+                <span>5 days ago</span>
               </div>
             </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
           </div>
-        </div>
+        </a>
+        <a href="#" class="group mb-5">
+          <div class="relative">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/560/315`"
+              alt="video_preview"
+              class="w-full rounded-xl"
+            />
+            <span
+              class="absolute top-1 right-1 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerXMarkIcon
+            /></span>
+            <span
+              class="absolute top-1 right-12 z-10 h-10 w-10 rounded-full bg-[#121212] p-2 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SpeakerWaveIcon
+            /></span>
+            <span
+              class="absolute top-12 right-1 z-10 opacity-0 transition duration-300 group-hover:opacity-100"
+              ><SubsLogo
+            /></span>
+            <span
+              class="absolute right-1 bottom-1 rounded bg-[#121212] px-0.5 text-sm font-semibold"
+              >42:32</span
+            >
+          </div>
+          <div class="mt-3 flex items-start">
+            <img
+              :src="`https://picsum.photos/seed/${randomSeed()}/32/32`"
+              alt="channelLogo"
+              class="mr-3 h-10 w-10 rounded-full"
+            />
+            <div>
+              <div class="mb-1 text-left font-semibold">Can you prove this?</div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span class="">Truth</span>
+                <CheckCircleIcon class="h-5" />
+              </div>
+              <div class="flex items-center gap-1 text-sm text-[#aaaaaa]">
+                <span>2M views</span>
+                &middot;
+                <span>2 week ago</span>
+              </div>
+            </div>
+            <button class="ml-auto">
+              <EllipsisVerticalIcon class="h-6" />
+            </button>
+          </div>
+        </a>
       </section>
     </main>
   </div>
